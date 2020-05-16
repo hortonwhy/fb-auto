@@ -24,7 +24,7 @@ class CustomClient(Client):
                     client.send(Message(text =message[0][2]), thread_ID[0].uid)
 
 def main():
-
+    global client
     session_cookies = openCookies()
     client = CustomClient(loginInfo[0][0],loginInfo[0][1], session_cookies=session_cookies)
     writeCookies(client.getSession())
